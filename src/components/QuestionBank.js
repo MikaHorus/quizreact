@@ -3,33 +3,33 @@
 const qBank = [
     {
         id: 1,
-        question: "What is the capital of Haryana?",
-        options: ["Yamunanagar", "Panipat", "Gurgaon", "Chandigarh"],
-        answer: "Chandigarh",
+        question: "Quel est le langage principal utilisé pour développer des sites web interactifs côté client ?",
+        options: ["Python", "Javascript", "C++", "SQL"],
+        answer: "Javascript",
     },
     {
         id: 2,
-        question: "What is the capital of Punjab?",
-        options: ["Patiala", "Ludhiana", "Amritsar", "Chandigarh"],
-        answer: "Chandigarh",
+        question: "What is the capital of Quelle planète est connue comme la “planète rouge” ?",
+        options: ["Vénus", "Mars", "Jupiter", "Saturne"],
+        answer: "Mars",
     },
     {
         id: 3,
-        question: "What is the capital of India?",
-        options: ["Delhi", "Mumbai", "Kolkata", "Chennai"],
-        answer: "Delhi"
+        question: "Quel composant de l’ordinateur est responsable du traitement des instructions ?",
+        options: ["RAM", "Disque Dur", "CPU", "Carte Graphique"],
+        answer: "CPU"
     },
     {
         id: 4,
-        question: "What is the capital of Uttarakhad?",
-        options: ["Roorkee", "Haridwar", "Dehradun", "Nanital"],
-        answer: "Dehradun"
+        question: "En HTML, quelle balise est utilisée pour créer un lien cliquable ?",
+        options: ["<div>", "<span>", "<a>", "<link>"],
+        answer: "<a>"
     },
     {
         id: 5,
-        question: "What is capital of Uttar Pradesh?",
-        options: ["GB Nagar", "Lucknow", "Prayagraj", "Agra"],
-        answer: "Lucknow"
+        question: "Quelle est la capitale de la France ?",
+        options: ["Lyon", "Marseille", "Paris", "AgrBordeauxa"],
+        answer: "Paris"
     },
 ]
 
