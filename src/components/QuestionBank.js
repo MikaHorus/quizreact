@@ -28,7 +28,7 @@ const qBank = [
     {
         id: 5,
         question: "Quelle est la capitale de la France ?",
-        options: ["Lyon", "Marseille", "Paris", "AgrBordeauxa"],
+        options: ["Lyon", "Marseille", "Paris", "Bordeaux"],
         answer: "Paris"
     },
 ]
