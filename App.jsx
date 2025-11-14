@@ -54,15 +54,15 @@ class App extends Component {
             this.state;
         return (
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
-                <div className="w-full max-w-2xl">
-                    <div className="text-center mb-12">
+                <div className="w-full max-w-2xl animate-fade-in-scale">
+                    <div className="text-center mb-12 animate-slide-in-down">
                         <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
                             QUIZ APP
                         </h1>
                         <div className="h-1 w-24 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
                     </div>
 
-                    <div className="bg-slate-800 backdrop-blur-xl bg-opacity-40 rounded-2xl shadow-2xl border border-slate-700 p-8 md:p-12">
+                    <div className="bg-slate-800 backdrop-blur-xl bg-opacity-40 rounded-2xl shadow-2xl border border-slate-700 p-8 md:p-12 animate-slide-in-up">
                         {!quizEnd ? (
                             <>
                                 <div className="mb-8">

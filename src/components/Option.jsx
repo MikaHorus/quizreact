@@ -7,11 +7,12 @@ class Options extends Component {
         const { options, selectedOption, onOptionChange } = this.props;
 
         return (
-            <div className='space-y-3'>
+            <div className='space-y-3 animate-slide-in-up'>
                 {options.map((option, index) => (
                     <label
                         key={index}
-                        className="flex items-center p-4 bg-slate-700 hover:bg-slate-600 border-2 border-slate-600 hover:border-blue-400 rounded-lg cursor-pointer transition-all duration-200 group"
+                        className="flex items-center p-4 bg-slate-700 hover:bg-slate-600 border-2 border-slate-600 hover:border-blue-400 rounded-lg cursor-pointer transition-all duration-300 group transform hover:scale-105 hover:-translate-y-1"
+                        style={{ animationDelay: `${index * 0.1}s`, animation: 'slideInUp 0.5s ease-out forwards' }}
                     >
                         <input
                             type="radio"
@@ -26,7 +27,7 @@ class Options extends Component {
                         </span>
                         {selectedOption === option && (
                             <div className="ml-auto">
-                                <div className="w-6 h-6 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full flex items-center justify-center">
+                                <div className="w-6 h-6 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full flex items-center justify-center animate-checkmark">
                                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                     </svg>

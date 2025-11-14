@@ -8,14 +8,14 @@ class Question extends Component {
         const { question, selectedOption, onOptionChange, onSubmit } = this.props;
 
         return (
-            <div>
-                <div className="mb-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+            <div className="animate-fade-in-scale">
+                <div className="mb-8 animate-slide-in-down">
+                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                         {question.question}
                     </h2>
                 </div>
 
-                <form onSubmit={onSubmit} className="space-y-6">
+                <form onSubmit={onSubmit} className="space-y-6 animate-slide-in-up">
                     <Options
                         options={question.options}
                         selectedOption={selectedOption}

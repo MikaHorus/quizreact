@@ -24,16 +24,16 @@ class Score extends Component {
         }
 
         return (
-            <div className="text-center">
-                <div className="mb-8">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <div className="text-center animate-fade-in-scale">
+                <div className="mb-8 animate-slide-in-down">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-float">
                         Résultats
                     </h2>
                     <div className="h-1 w-24 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
                 </div>
 
                 <div className="space-y-8">
-                    <div className="relative w-48 h-48 mx-auto">
+                    <div className="relative w-48 h-48 mx-auto transform transition-transform hover:scale-110 duration-300">
                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
                             <circle
                                 cx="100"
@@ -69,7 +69,7 @@ class Score extends Component {
                         </div>
                     </div>
 
-                    <div className={`text-3xl font-bold bg-gradient-to-r ${color} bg-clip-text text-transparent`}>
+                    <div className={`text-3xl font-bold bg-gradient-to-r ${color} bg-clip-text text-transparent animate-bounce-soft`}>
                         {message}
                     </div>
 
@@ -84,7 +84,7 @@ class Score extends Component {
 
                     <button
                         onClick={onRestart}
-                        className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg"
+                        className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg animate-pulse-glow"
                     >
                         Recommencer
                     </button>
