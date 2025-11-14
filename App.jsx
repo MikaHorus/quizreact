@@ -15,24 +15,32 @@ class App extends Component {
             selectedOption: "",
             score: 0,
             quizEnd: false,
+            answered: false,
+            isCorrect: null,
         };
     }
 
     handleOptionChange = (e) => {
-        this.setState({ selectedOption: e.target.value });
+        if (!this.state.answered) {
+            this.setState({ selectedOption: e.target.value });
+        }
     };
 
     handleFormSubmit = (e) => {
         e.preventDefault();
+        if (this.state.answered) return;
         this.checkAnswer();
-        this.handleNextQuestion();
     };
 
     checkAnswer = () => {
         const { questionBank, currentQuestion, selectedOption, score } = this.state;
-        if (selectedOption === questionBank[currentQuestion].answer) {
-            this.setState((prevState) => ({ score: prevState.score + 1 }));
-        }
+        const isCorrect = selectedOption === questionBank[currentQuestion].answer;
+        
+        this.setState({
+            answered: true,
+            isCorrect: isCorrect,
+            score: isCorrect ? score + 1 : score,
+        });
     };
 
     handleNextQuestion = () => {
@@ -41,6 +49,8 @@ class App extends Component {
             this.setState((prevState) => ({
                 currentQuestion: prevState.currentQuestion + 1,
                 selectedOption: "",
+                answered: false,
+                isCorrect: null,
             }));
         } else {
             this.setState({
@@ -50,7 +60,7 @@ class App extends Component {
     };
 
     render() {
-        const { questionBank, currentQuestion, selectedOption, score, quizEnd } =
+        const { questionBank, currentQuestion, selectedOption, score, quizEnd, answered, isCorrect } =
             this.state;
         return (
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
@@ -70,6 +80,9 @@ class App extends Component {
                                         <span className="text-sm font-semibold text-blue-300">
                                             Question {currentQuestion + 1}/{questionBank.length}
                                         </span>
+                                        <span className="text-sm font-semibold text-cyan-300">
+                                            Score: {score}
+                                        </span>
                                         <div className="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
                                             <div
                                                 className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 transition-all duration-300"
@@ -86,6 +99,9 @@ class App extends Component {
                                     selectedOption={selectedOption}
                                     onOptionChange={this.handleOptionChange}
                                     onSubmit={this.handleFormSubmit}
+                                    answered={answered}
+                                    isCorrect={isCorrect}
+                                    onNext={this.handleNextQuestion}
                                 />
                             </>
                         ) : (
@@ -98,6 +114,8 @@ class App extends Component {
                                         selectedOption: "",
                                         score: 0,
                                         quizEnd: false,
+                                        answered: false,
+                                        isCorrect: null,
                                     });
                                 }}
                             />
