@@ -9,7 +9,7 @@ const qBank = [
     },
     {
         id: 2,
-        question: "What is the capital of Quelle planète est connue comme la “planète rouge” ?",
+        question: "Quelle planète est connue comme la “planète rouge” ?",
         options: ["Vénus", "Mars", "Jupiter", "Saturne"],
         answer: "Mars",
     },
