@@ -7,19 +7,33 @@ class Options extends Component {
         const { options, selectedOption, onOptionChange } = this.props;
 
         return (
-            <div className='options'>
+            <div className='space-y-3'>
                 {options.map((option, index) => (
-                    <div key={index} className="form-check">
+                    <label
+                        key={index}
+                        className="flex items-center p-4 bg-slate-700 hover:bg-slate-600 border-2 border-slate-600 hover:border-blue-400 rounded-lg cursor-pointer transition-all duration-200 group"
+                    >
                         <input
                             type="radio"
                             name="option"
                             value={option}
                             checked={selectedOption === option}
                             onChange={onOptionChange}
-                            className="form-check-input"
+                            className="w-5 h-5 text-blue-500 bg-slate-700 border-slate-600 focus:ring-2 focus:ring-blue-400 cursor-pointer"
                         />
-                        <label className="form-check-label">{option}</label>
-                    </div>
+                        <span className="ml-4 text-lg text-white group-hover:text-blue-300 transition-colors">
+                            {option}
+                        </span>
+                        {selectedOption === option && (
+                            <div className="ml-auto">
+                                <div className="w-6 h-6 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full flex items-center justify-center">
+                                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                </div>
+                            </div>
+                        )}
+                    </label>
                 ))}
             </div>
         );
