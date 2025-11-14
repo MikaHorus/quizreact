@@ -72,7 +72,7 @@ class App extends Component {
                         <div className="h-1 w-24 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
                     </div>
 
-                    <div className="bg-slate-800 backdrop-blur-xl bg-opacity-40 rounded-2xl shadow-2xl border border-slate-700 p-8 md:p-12 animate-slide-in-up">
+                    <div className="bg-slate-800 backdrop-blur-xl bg-opacity-40 rounded-2xl shadow-2xl p-8 md:p-12 animate-slide-in-up">
                         {!quizEnd ? (
                             <>
                                 <div className="mb-8">
